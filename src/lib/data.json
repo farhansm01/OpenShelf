@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "description": "A guide to becoming a better software developer through practical advice and real-world examples.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://m.media-amazon.com/images/I/71f743sOPoL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship that teaches how to write clean, readable code.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://m.media-amazon.com/images/I/71T7aD3EOTL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 3,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "An exploration of cosmology, black holes, and the nature of time written for general audiences.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://m.media-amazon.com/images/I/A1xkFZX5k-L._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "description": "A sweeping history of humankind from the Stone Age to the present day.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://m.media-amazon.com/images/I/713jIoMO3UL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A magical story about following your dreams and listening to your heart.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://m.media-amazon.com/images/I/51Z0nLAfLmL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 6,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A powerful story of racial injustice and moral growth in the American South.",
+    "category": "Story",
+    "available_quantity": 2,
+    "image_url": "https://m.media-amazon.com/images/I/71FxgtFKcQL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A story of wealth, love, and the American Dream set in the roaring 1920s.",
+    "category": "Story",
+    "available_quantity": 3,
+    "image_url": "https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 8,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "description": "A deep dive into the core mechanisms of JavaScript for serious developers.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://m.media-amazon.com/images/I/71Mnxgs6CXL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 9,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "A groundbreaking book that explains evolution from the gene's perspective.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 10,
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A chilling dystopian novel about surveillance, totalitarianism and loss of freedom.",
+    "category": "Story",
+    "available_quantity": 9,
+    "image_url": "https://m.media-amazon.com/images/I/71kxa2BPPyL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 11,
+    "title": "The Universe in a Nutshell",
+    "author": "Stephen Hawking",
+    "description": "Hawking explores the cutting-edge theories of the universe in an accessible way.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://m.media-amazon.com/images/I/81S7RDDP2GL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "description": "A practical guide to building good habits and breaking bad ones through small changes.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://m.media-amazon.com/images/I/81wgcld4wxL._AC_UF1000,1000_QL80_.jpg"
+  }
+]

@@ -2,9 +2,9 @@
 @plugin "daisyui";
 
 [data-theme="openshelf"] {
-  --color-primary: #2d6a4f;
-  --color-secondary: #e9a84c;
-  --color-accent: #e9a84c;
-  --color-base-100: #f8f5f0;
-  --color-neutral: #1a1a2e;
+  --color-primary: #6b3f1f;
+  --color-secondary: #d4a853;
+  --color-accent: #d4a853;
+  --color-base-100: #fdf6ec;
+  --color-neutral: #2c1a0e;
 }
