@@ -4,7 +4,7 @@ A seamless and modern online book borrowing platform that digitizes the traditio
 
 ## 🔗 Live URL
 
-[OpenShelf Live](https://openshelf.vercel.app)
+[OpenShelf Live](https://open-shelf-ten.vercel.app)
 
 ## 🎯 Purpose
 
