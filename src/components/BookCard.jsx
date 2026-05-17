@@ -4,7 +4,7 @@ import { MdCategory } from "react-icons/md";
 
 const BookCard = ({ book }) => {
   return (
-    <div className="card bg-base-100 shadow-md hover:shadow-xl transition-shadow duration-300 border border-base-200">
+    <div className="card bg-base-100 shadow-md hover:shadow-xl transition-shadow duration-300 border border-base-200 mx-auto w-full">
       <figure className="px-4 pt-4">
         <img
           src={book.image_url}

@@ -24,13 +24,13 @@ const BooksPage = () => {
       <h1 className="text-3xl font-bold text-neutral mb-8">All Books</h1>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="sticky top-20">
+        <div className="md:sticky md:top-20">
           <CategorySidebar
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {filteredBooks.length > 0 ? (
             filteredBooks.map((book) => <BookCard key={book.id} book={book} />)
           ) : (
