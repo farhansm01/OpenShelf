@@ -1,4 +1,11 @@
+"use client";
+
 import { FaQuoteLeft } from "react-icons/fa";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 const testimonials = [
   {
     id: 1,
@@ -28,38 +35,45 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 px-6 bg-base-200">
+      <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-neutral text-center mb-2">
           What Our Readers Say
         </h2>
         <p className="text-center opacity-50 text-sm mb-10">
           Real experiences from our community
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={24}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          className="pb-10"
+        >
           {testimonials.map((t) => (
-            <div
-              key={t.id}
-              className="bg-base-100 border border-base-200 rounded-xl p-6 shadow-sm hover:shadow-md transition"
-            >
-              <FaQuoteLeft className="text-primary text-2xl mb-4 opacity-50" />
-              <p className="text-sm opacity-70 mb-6 leading-relaxed">
-                {t.review}
-              </p>
-              <div className="flex items-center gap-3">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="w-10 h-10 rounded-full bg-base-200 object-contain shrink-0"
-                />
-                <div>
-                  <p className="font-bold text-sm text-neutral">{t.name}</p>
-                  <p className="text-xs opacity-50">{t.role}</p>
+            <SwiperSlide key={t.id}>
+              <div className="bg-[#E8D5C0] border border-base-200 rounded-xl p-8 shadow-sm">
+                <FaQuoteLeft className="text-primary text-2xl mb-4 opacity-50" />
+                <p className="text-sm opacity-70 mb-6 leading-relaxed">
+                  {t.review}
+                </p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="w-10 h-10 rounded-full shrink-0 object-contain"
+                  />
+                  <div>
+                    <p className="font-bold text-sm text-neutral">{t.name}</p>
+                    <p className="text-xs opacity-50">{t.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
