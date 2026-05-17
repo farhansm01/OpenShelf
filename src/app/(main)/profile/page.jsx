@@ -27,15 +27,21 @@ const ProfilePage = () => {
             <img
               src={user.image}
               alt="avatar"
+              onError={(e) => {
+                e.target.style.display = "none";
+                e.target.nextSibling.style.display = "flex";
+              }}
               className="w-24 h-24 rounded-full object-cover border-4 border-primary"
             />
-          ) : (
-            <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-3xl font-bold text-primary-content">
-                {user?.name?.charAt(0).toUpperCase()}
-              </span>
-            </div>
-          )}
+          ) : null}
+          <div
+            style={{ display: user?.image ? "none" : "flex" }}
+            className="w-24 h-24 rounded-full bg-primary flex items-center justify-center"
+          >
+            <span className="text-3xl font-bold text-primary-content">
+              {user?.name?.charAt(0).toUpperCase()}
+            </span>
+          </div>
         </div>
 
         {/* User Info */}
