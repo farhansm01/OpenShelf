@@ -1,4 +1,9 @@
+"use client";
+
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   FaBars,
   FaBookOpen,
@@ -10,7 +15,14 @@ import { IoHomeSharp } from "react-icons/io5";
 import { MdMenuBook } from "react-icons/md";
 
 const Navbar = () => {
-  const isLoggedIn = false;
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user;
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await authClient.signOut();
+    router.push("/");
+  };
 
   return (
     <nav className="bg-base-100 shadow-sm sticky top-0 z-50">
@@ -24,7 +36,7 @@ const Navbar = () => {
           <span>OpenShelf</span>
         </Link>
 
-        {/* Center - Nav Links (hidden on mobile) */}
+        {/* Center - Nav Links */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium">
           <Link
             href="/"
@@ -46,15 +58,31 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Right - Login */}
+        {/* Right - Auth */}
         <div className="hidden md:flex items-center gap-3">
-          {isLoggedIn ? (
-            <>
-              <span className="font-medium text-sm">John Doe</span>
-              <button className="btn btn-sm btn-error flex items-center gap-1">
+          {isPending ? (
+            <span className="loading loading-spinner loading-md"></span>
+          ) : user ? (
+            <div className="flex items-center gap-3">
+              {user?.image ? (
+                <Image
+                  src={user.image}
+                  alt="user avatar"
+                  width={35}
+                  height={35}
+                  className="rounded-full"
+                />
+              ) : (
+                <FaUser className="text-2xl text-primary" />
+              )}
+              <span className="font-medium text-sm">{user?.name}</span>
+              <button
+                onClick={handleLogout}
+                className="btn btn-sm bg-primary text-white flex items-center gap-1"
+              >
                 <FaSignOutAlt /> Logout
               </button>
-            </>
+            </div>
           ) : (
             <Link
               href="/login"
@@ -90,8 +118,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              {isLoggedIn ? (
-                <button className="text-error">
+              {user ? (
+                <button onClick={handleLogout} className="text-error">
                   <FaSignOutAlt /> Logout
                 </button>
               ) : (
