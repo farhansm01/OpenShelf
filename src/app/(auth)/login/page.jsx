@@ -115,7 +115,7 @@ const LoginPage = () => {
             Don&apos;t have an account?{" "}
             <Link
               href="/register"
-              className="font-bold hover:underline text-[#111111]"
+              className="font-bold hover:underline text-red-500"
             >
               Register
             </Link>
